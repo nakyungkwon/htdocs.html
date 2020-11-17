@@ -3,17 +3,60 @@
 <head>
 <meta charset="utf-8">
 <title>WEB - HTML</title>
+<style>
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 1px solid gray;
+    margin:0;
+    padding:20px;
+  }
+  #grid ol {
+    border-right: 1px solid gray;
+    display:block;
+    width:100px;
+    margin:0;
+    padding:20px;
+    padding-left:33px;
+  }
+  body {
+    margin:0;
+  }
+  #grid {
+    display:grid;
+    grid-template-columns: 150px 1fr
+  }
+  #grid #article {
+    padding:30px;
+    padding-top:0;
+  }
+  @media(max-width:500px) {
+    h1 {
+      border-bottom:none;
+    }
+    #grid ol {
+      border-right:none;
+    }
+    #grid {
+      display:block;
+    }
+  }
+
+</style>
 </head>
   <body>
-    <h1>WEB</h1>
+    <h1><a href="index.html">WEB</a></h1>
+    <div id="grid">
     <ol>
       <li><a href="1.html">HTML</a></li>
       <li><a href="2.html">CSS</a></li>
       <li><a href="3.html">JavaScript</a></li>
     </ol>
+    <div id="article">
     <h2>What is HTML?</h2>
     <p><a href="https://en.wikipedia.org/wiki/HTML" target="_blank" title="Definition of HTML in Wikipedia">Hypertext Markup Language (HTML)<a> is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
 
     <p>Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
-  </body>
+  </div>
+</div>
 </html>
